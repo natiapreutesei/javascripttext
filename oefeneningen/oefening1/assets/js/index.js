@@ -13,25 +13,34 @@ function perimeterTriangle(sidea,sideb,sidec){ //function to calculate perimeter
 function areaTriangle(base,height){ //function to calculate the area of a triangle
     return 1/2*base*height;
 }
-function perimeterParallelogram(sidea,sideb){ //function to calculate perimeter of a parallelogram
-    return (sidea*2)+(sideb*2);
-}1
+function perimeterParallelogram(sideA,sideB){ //function to calculate perimeter of a parallelogram
+    return (sideA*2)+(sideB*2);
+}
 function areaParallelogram(base,height){ //function to calculate the area of a parallelogram
     return base*height;
 }
 function perimeterCircle(radius){ //function to calculate the perimeter of a circle
-    var pi=3.14;
+    const pi = 3.14;
     return 2*pi*radius;
 }
 function areaCircle(radius){ //function to calculate the area of a circle
-    var pi=3.14;
+    const pi = 3.14;
     return pi*radius*radius;
 }
-/*
-var diagonal1 = 10;
-var diagonal2 = 15;
-let area = areaRhombus(diagonal1,diagonal2);
-console.log(area);
-*/
 
+let mSelected = document.getElementById("menu");
+function clck(){
+    if(mSelected.value === "1"){
+        perimeterSquare();
+    }
 
+   if(mSelected.value == "2"){
+        perimeterSquare();
+    }
+
+    /*if(qSelect.value == "3"){
+        qCD.innerHTML = "14";
+        qStats1.innerHTML = "160";
+    }*/
+}
+mSelected.addEventListener('change',clck);
