@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<!DOCTYPE html>
+		<style>
+            body {
+                background: cornflowerblue;
+                margin: 0;
+            }
+
+            .outerdiv {
+                height: 400px;
+                width: 60%;
+				border: 5px solid black;
+				overflow: hidden;
+                margin: 50px auto;
+	            cursor: zoom-in;
+            }
+
+            .box {
+                height: 100%;
+                width: 100%;
+                background-image: url('bugsbunny.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: transform 0.5s ease-out;
+            }
+
+            .box:hover {
+                transform: scale(1.5);
+            }
+		</style>
+	</head>
+	<body>
+	<div class="outerdiv">
+		<div class="box"></div>
+	</div>
+	</body>
+</html>
