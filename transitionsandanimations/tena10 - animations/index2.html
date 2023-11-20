@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>3D Rotation Effect</title>
+	<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        @keyframes rotate3d {
+            0% { transform: rotatey(0); }
+            100% { transform: rotatey(360deg); }
+        }
+
+        /* Here down is the animation from above applied */
+        .card {
+            perspective: 500px;
+            animation: rotate3d 5s linear infinite; /* Increased the animation duration */
+            transform-style: preserve-3d; /* Added to maintain child perspective during rotation */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+	</style>
+</head>
+<body>
+<div class="card">
+	<p>Card with 3D effect!</p>
+</div>
+</body>
+</html>
